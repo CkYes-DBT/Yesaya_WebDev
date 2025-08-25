@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.box{
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 280px;
+  position: relative;
+  min-height: 200px;
+}
+
+.number {
+  color: red;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.text {
+  color: #555;
+  font-size: 14px}
+
+.icon {
+  position: absolute;
+  bottom:20px;
+  left: 20px;
+  width: 60px;
+  height: 60px;
+}
