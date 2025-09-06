@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolios</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-md">
+    <div class="container">
+      <a class="navbar-brand" href="#">&#123; &#125; My Portfolios</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<section class="hero d-flex align-items-center">
+  <div class="container">
+    <p class="lead">Fullstack Developer</p>
+    <h1 class="fw-bold">Halo, saya CkGanteng - membangun website cepat & responsif</h1>
+    <p>Mengutamakan Performa, aksesibilitas, dan desain yang bersih</p>
+    <div class="d-flex justify-content-center gap-2">
+      <a href="#projects" class="btn btn-primary">⚡ Lihat Proyek</a>
+      <a href="#contact" class="btn btn-outline-light">Kontak</a>
+    </div>
+  </div>
+</section>
+
+  <section id="projects" class="py-5">
+    <div class="container py-3 my-3">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Proyek Terpilih</h2>
+        <a href="#" class="btn btn-outline-secondary">Semua Proyek</a>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100">
+            <img src="https://picsum.photos/seed/p1/800/500" class="card-img-top" alt="Project1">
+            <div class="card-body">
+              <h5 class="h5 card-title">Dashboard Analytics</h5>
+              <p class="card-text">SPA ringan untuk memantau metrik harian.</p>
+              <span class="badge bg-dark">Bootstrap</span>
+              <span class="badge bg-secondary">Charts</span>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#" class="btn btn-outline-primary w-100">Lihat</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+            <img src="https://picsum.photos/seed/p2/800/500" class="card-img-top" alt="Project2">
+            <div class="card-body">
+              <h5 class="h5 card-title">Landing Page Startup</h5>
+              <p class="card-text">Landing page cepat dengan SEO dasar dan CTA jelas.</p>
+              <span class="badge bg-dark">Bootstrap</span>
+              <span class="badge bg-secondary">SEO</span>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#" class="btn btn-outline-primary w-100">Lihat</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card h-100">
+            <img src="https://picsum.photos/seed/p3/800/500" class="card-img-top" alt="Project3">
+            <div class="card-body">
+              <h5 class="h5 card-title">Toko Katalog Sederhana</h5>
+              <p class="card-text">Grid produk responsif dengan kartu dan modal detail.</p>
+              <span class="badge bg-dark">Bootstrap</span>
+              <span class="badge bg-secondary">UI</span>
+            </div>
+            <div class="card-footer text-center">
+              <a href="#" class="btn btn-outline-primary w-100">Lihat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+    <style>
+:root {
+  --hero-overlay: rgba(0, 0, 0, 0.35);
+}
+
+.hero {
+  background: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url("https://images.unsplash.com/photo-1518773553398-650c184e0bb3?q=80&w=1600&auto=format&fit=crop")
+    center/cover no-repeat;
+  color: #fff;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero p.lead {
+    font-size: 1rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  :root {
+    --hero-overlay: rgba(0, 0, 0, 0.45);
+  }
+
+  .skills .progress {
+    height: 0.6rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero {
+    min-height: 85vh;
+  }
+
+  section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .skills .progress {
+    height: 0.75rem;
+  }
+}
+  
