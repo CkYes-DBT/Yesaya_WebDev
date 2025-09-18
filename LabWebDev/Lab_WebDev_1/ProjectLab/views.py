@@ -1,14 +1,34 @@
-from django.shortcuts import HttpResponse
-from django.template import loader
-from .models import mahasiswa
+from django.shortcuts import render, redirect
+from .models import Mahasiswa
 
-def Mahasiswa(request):
-    mymahasiswa = mahasiswa.objects.all().values()
-    template = loader.get_template('index.html')
+def mahasiswa_view(request):
+    if request.method == 'POST':
+        action = request.POST.get('action')
 
-    context = {
-        'mymahasiswa': mymahasiswa,
-    }
+        if action == 'add':
+            Mahasiswa.objects.create(
+                nim=request.POST.get('nim'),
+                firstname=request.POST.get('firstname'),
+                lastname=request.POST.get('lastname'),
+                jurusan=request.POST.get('jurusan'),
+            )
 
-    return HttpResponse(template.render(context, request))
+        elif action == 'update':
+            mhs = Mahasiswa.objects.get(id=request.POST.get('id'))
+            mhs.firstname = request.POST.get('firstname')
+            mhs.lastname = request.POST.get('lastname')
+            mhs.jurusan = request.POST.get('jurusan')
+            mhs.save()
+
+        elif action == 'delete':
+            mhs = Mahasiswa.objects.get(id=request.POST.get('id'))
+            mhs.delete()
+
+        return redirect('/ProjectLab/')
+
+    mymahasiswa = Mahasiswa.objects.all()
+    return render(request, 'index.html', {'mymahasiswa': mymahasiswa})
+
+
+  
     
